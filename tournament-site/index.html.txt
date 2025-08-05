@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Fire Tournament Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .container {
+      max-width: 440px;
+      margin: 40px auto 60px auto;
+      padding: 30px 25px;
+      background: rgba(12, 16, 30, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    input, select {
+      width: 96%;
+      padding: 8px;
+      margin: 7px 0 16px;
+      border: none;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+    .register-btn {
+      width: 100%;
+      padding: 10px;
+      background: #ff4747;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 12px;
+    }
+    .register-btn:hover {
+      background: #cf2525;
+    }
+    .rules {
+      margin-top: 28px;
+      background: rgba(32, 32, 32, 0.8);
+      border-radius: 12px;
+      padding: 16px 12px;
+      font-size: 14px;
+      color: #ddd;
+    }
+    .rules ul {
+      padding-left: 18px;
+    }
+    .tournament-fee-info {
+      margin-bottom: 35px;
+      padding: 20px 25px;
+      background: rgba(38, 38, 50, 0.9);
+      border-radius: 12px;
+      color: #ffc107;
+      box-shadow: 0 4px 20px rgba(255, 165, 0, 0.3);
+    }
+    .tournament-fee-info h3 {
+      font-weight: 700;
+      font-size: 1.4em;
+      color: #ffa500;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .fee-item {
+      margin-bottom: 20px;
+    }
+    .fee-item h4 {
+      margin-bottom: 8px;
+      border-bottom: 1px solid #ffb300;
+      padding-bottom: 6px;
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+    .fee-item ul {
+      list-style-type: disc;
+      padding-left: 18px;
+      color: #ffd966;
+    }
+    .fee-item ul li {
+      padding: 3px 0;
+      font-size: 1em;
+    }
+    .payment-section {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #ff4444;
+    }
+    .payment-section img {
+      width: 180px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #ff6f6f;
+    }
+    .payment-section p {
+      margin: 6px 0 18px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffcc66;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Free Fire Tournament Registration</h2>
+
+    <div class="tournament-fee-info">
+      <h3>Tournament Fee & Prize Details</h3>
+
+      <div class="fee-item">
+        <h4>Solo</h4>
+        <ul>
+          <li>Entry Fee: ₹25</li>
+          <li>Top 1 Winning Prize: ₹100</li>
+          <li>Total Players: 48</li>
+          <li>Per Kill Reward: ₹15</li>
+        </ul>
+      </div>
+
+      <div class="fee-item">
+        <h4>Duo</h4>
+        <ul>
+          <li>Entry Fee: ₹25 (per player)</li>
+          <li>Top 1 Winning Prize: ₹150</li>
+          <li>Total Slots: 25 (48 players total)</li>
+          <li>Per Kill Reward: ₹10</li>
+        </ul>
+      </div>
+
+      <div class="fee-item">
+        <h4>Squad</h4>
+        <ul>
+          <li>Entry Fee: ₹160 total (₹40 per player)</li>
+          <li>Top 1 Winning Prize: ₹250</li>
+          <li>Total Slots: 12 (48 players total)</li>
+          <li>Per Kill Reward: ₹10</li>
+        </ul>
+      </div>
+    </div>
+
+    <form id="registrationForm" enctype="multipart/form-data">
+      <label for="type">Tournament Type:</label>
+      <select id="type" name="type" required>
+        <option value="">Select</option>
+        <option value="Solo">Solo</option>
+        <option value="Duo">Duo</option>
+        <option value="Squad">Squad</option>
+      </select><br>
+
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" required /><br>
+
+      <label for="ingamename">In-game Name:</label>
+      <input id="ingamename" type="text" name="ingamename" required /><br>
+
+      <label for="ffuid">Free Fire UID:</label>
+      <input id="ffuid" type="text" name="ffuid" required /><br>
+
+      <label for="paymentmode">Payment Mode:</label>
+      <select id="paymentmode" name="paymentmode" required>
+        <option value="">Select</option>
+        <option value="UPI">UPI</option>
+        <option value="Paytm">Paytm</option>
+        <option value="PhonePe">PhonePe</option>
+      </select><br>
+
+      <label for="slotnumber">Slot Number:</label>
+      <input id="slotnumber" type="text" name="slotnumber" required /><br>
+
+      <label for="time">Time:</label>
+      <input id="time" type="time" name="time" required /><br>
+
+      <label for="date">Date:</label>
+      <input id="date" type="date" name="date" required /><br>
+
+      <label for="level">Level:</label>
+      <input id="level" type="text" name="level" required /><br>
+
+      <label for="screenshot">Screenshot (Profile):</label>
+      <input id="screenshot" type="file" name="screenshot" accept="image/*" required /><br>
+
+      <label for="phone">Phone Number:</label>
+      <input id="phone" type="tel" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required /><br>
+
+      <label for="map">Map:</label>
+      <input id="map" type="text" name="map" value="Bermuda" readonly /><br>
+
+      <input type="checkbox" id="agree" name="agree" required />
+      <label for="agree">I agree to all tournament rules.</label><br>
+
+      <!-- Payment and Submit -->
+      <div class="payment-section">
+        <h4>Scan QR or Pay Online</h4>
+        <img src="your-qr-code.jpg" alt="Pay QR Code" />
+        <p>Phone/UPI Number: 9241890680</p>
+        <button id="rzp-button" class="register-btn" type="button">Pay & Register</button>
+      </div>
+    </form>
+
+    <div class="rules">
+      <h3>Tournament Rules & Agreement</h3>
+      <ul>
+        <li>No emulators allowed – Mobile players only.</li>
+        <li>Hacking, teaming, or any unfair gameplay = disqualification.</li>
+        <li>Room ID and password shared 15 minutes before match via WhatsApp.</li>
+        <li>Late joiners not allowed once match starts.</li>
+        <li>Recording your gameplay recommended for dispute resolution.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Razorpay SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+    });
+
+    const options = {
+      key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
+      amount: 2500, // Amount in paise ₹25 entry fee (adjust according to selection)
+      currency: "INR",
+      name: "Free Fire Tournament",
+      description: "Tournament Entry Fee",
+      handler: function (response) {
+        alert("Payment successful. Payment ID: " + response.razorpay_payment_id);
+        submitForm();
+      },
+      prefill: {
+        // Prefill contact details optionally
+        contact: document.getElementById('phone').value,
+      },
+      theme: {
+        color: "#F37254",
+      },
+    };
+
+    const rzp = new Razorpay(options);
+
+    document.getElementById('rzp-button').onclick = function(e) {
+      e.preventDefault();
+
+      // Validate form fields before opening payment
+      const form = document.getElementById('registrationForm');
+      if (!form.checkValidity()) {
+        alert("Please fill all required fields correctly.");
+        return;
+      }
+
+      // Update payment amount based on type
+      const type = document.getElementById('type').value;
+      switch(type) {
+        case "Solo":
+          options.amount = 2500;    // ₹25 
+          break;
+        case "Duo":
+          options.amount = 2500;    // ₹25 per player, assume 1 player paying here
+          break;
+        case "Squad":
+          options.amount = 4000;    // ₹40 per player
+          break;
+        default:
+          alert("Select a tournament type to proceed.");
+          return;
+      }
+      rzp.open();
+    };
+
+    function submitForm() {
+      const form = document.getElementById('registrationForm');
+      // Here you can proceed to send data to your backend or API
+      // For now we just show a message and reset form
+      alert("Thank you for registering! Your details are received.");
+      form.reset();
+    }
+  </script>
+</body>
+</html>
